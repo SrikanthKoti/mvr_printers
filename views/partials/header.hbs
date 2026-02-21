@@ -1,0 +1,24 @@
+<header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16 py-4">
+      <div class="flex items-center gap-6">
+        <button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+      <div class="absolute left-1/2 -translate-x-1/2">
+        <h1 class="text-xl font-extrabold tracking-tighter uppercase">{{site.header.brandName}}</h1>
+      </div>
+      <div class="flex items-center gap-6 text-sm font-medium">
+        {{#each site.header.navTop}}
+        <a class="hover:underline" href="{{href}}">{{label}}</a>
+        {{/each}}
+      </div>
+    </div>
+    <div class="flex justify-center gap-8 py-3 text-[10px] uppercase tracking-widest font-bold border-t border-gray-100 dark:border-gray-900">
+      {{#each site.header.navCategories}}
+      <a class="hover:text-primary transition-colors" href="{{href}}">{{label}}</a>
+      {{/each}}
+    </div>
+  </div>
+</header>

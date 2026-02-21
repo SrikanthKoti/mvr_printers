@@ -1,0 +1,14 @@
+<section>
+  <h2 class="text-3xl font-extrabold mb-8">{{site.serviceCategories.sectionTitle}}</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {{#each site.serviceCategories.items}}
+    <div class="rounded-2xl p-6 relative group overflow-hidden h-[400px] {{cardClass}}">
+      <div class="relative z-10 text-center {{textClass}}">
+        <h4 class="text-xl font-bold">{{title}}</h4>
+        <p class="text-sm {{countClass}}">{{serviceCount}}</p>
+      </div>
+      <img alt="{{imageAlt}}" class="absolute bottom-[-10%] left-1/2 -translate-x-1/2 w-4/5 object-contain group-hover:scale-110 transition-transform duration-500" src="{{image}}"/>
+    </div>
+    {{/each}}
+  </div>
+</section>

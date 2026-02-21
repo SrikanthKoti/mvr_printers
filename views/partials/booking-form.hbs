@@ -1,0 +1,41 @@
+<section>
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-extrabold mb-2">{{site.bookingForm.title}}</h2>
+    <p class="text-gray-500 italic">{{site.bookingForm.subtitle}}</p>
+  </div>
+  <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 lg:p-12 shadow-sm max-w-4xl mx-auto border-2 border-blue-500">
+    <form class="space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-semibold mb-2" for="service-type">{{site.bookingForm.serviceTypeLabel}}</label>
+          <select class="w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl py-3 px-4 focus:ring-1 focus:ring-primary" id="service-type">
+            {{#each site.bookingForm.serviceTypeOptions}}
+            <option>{{this}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-2" for="user-name">{{site.bookingForm.userNameLabel}}</label>
+          <input class="w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl py-3 px-4 focus:ring-1 focus:ring-primary" id="user-name" placeholder="{{site.bookingForm.userNamePlaceholder}}" type="text"/>
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold mb-2" for="email">{{site.bookingForm.emailLabel}}</label>
+        <input class="w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl py-3 px-4 focus:ring-1 focus:ring-primary" id="email" placeholder="{{site.bookingForm.emailPlaceholder}}" type="email"/>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold mb-2" for="phone">{{site.bookingForm.phoneLabel}}</label>
+        <input class="w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl py-3 px-4 focus:ring-1 focus:ring-primary" id="phone" placeholder="{{site.bookingForm.phonePlaceholder}}" type="tel"/>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold mb-2" for="details">{{site.bookingForm.detailsLabel}}</label>
+        <textarea class="w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl py-3 px-4 focus:ring-1 focus:ring-primary" id="details" placeholder="{{site.bookingForm.detailsPlaceholder}}" rows="4"></textarea>
+      </div>
+      <div class="flex items-end">
+        <button class="w-full bg-primary text-white py-4 rounded-xl font-bold hover:opacity-90 transition-opacity flex justify-center items-center gap-2" type="submit">
+          {{site.bookingForm.submitText}} <span class="material-symbols-outlined text-sm">{{site.bookingForm.submitIcon}}</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

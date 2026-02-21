@@ -1,0 +1,5 @@
+{{#if href}}
+<a class="bg-primary text-white px-8 py-4 rounded-full font-bold flex items-center gap-4 hover:opacity-90 transition-opacity inline-flex" href="{{href}}">{{text}} {{#if icon}}<span class="material-symbols-outlined text-sm">{{icon}}</span>{{/if}}</a>
+{{else}}
+<button type="button" class="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 transition-colors">{{text}}</button>
+{{/if}}

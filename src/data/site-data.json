@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "title": "M V R PRINTERS | Modern Printing Solutions",
+    "description": "Modern printing solutions for businesses, schools, and personal projects"
+  },
+  "header": {
+    "brandName": "M V R PRINTERS",
+    "navTop": [
+      { "label": "About Us", "href": "#" },
+      { "label": "Blog", "href": "#" },
+      { "label": "FAQ", "href": "#" }
+    ],
+    "navCategories": [
+      { "label": "Business", "href": "#" },
+      { "label": "Marketing", "href": "#" },
+      { "label": "Apparel", "href": "#" },
+      { "label": "Events", "href": "#" },
+      { "label": "Bulk Orders", "href": "#" },
+      { "label": "Design Studio", "href": "#" }
+    ]
+  },
+  "hero": {
+    "headline": "Quality Printing For Your Vision",
+    "subheadline": "Premium printing services tailored for businesses, schools, and personal projects. Precision in every pixel.",
+    "ctaText": "BOOK NOW",
+    "ctaHref": "#",
+    "ctaIcon": "north_east",
+    "heroImage": {
+      "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAurjc4fKfGK-n7eCfECT4ahYtasShcpNa5wKj9JdNCdfWZU7zTs2Z3L-3fTs7F9nbZZvBb48Zh9p5ekVzaR0T0ZlLX8s19qaqj79J59eznzqh7JYzAlSv87jngGjJ8a7IOZSoFgqqpViQOQxywdBmT56v-hDZCsePcJw1xJx85HnsRFcDVafsSVR4BwecPpjo0B-l_ATJwS1Ly-a6gjiHngQZ1obSkbPr7RhsuA9Q0L8-cvg3tVWN8Nc7XWxcI1QdImgupOjejSOOS",
+      "alt": "Premium Printing Materials"
+    },
+    "testimonial": {
+      "label": "5,000+ Happy Clients",
+      "quote": "Unmatched quality and fast delivery every time."
+    },
+    "customerAvatars": [
+      { "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSReKeyAje4SCY6dXiA2UX4V3Epg99UGA-eStZMH4r6VGRMSIhtao-KNFUCUfKIizlShrz39p1gHWspbdWITR7uOrlGinE4YGtN8akckwHtCxnYY9KmYQ3M91cYe6XkkYZ7G0weSFGk8pv7AnkgWDUMPrGP0pd2VAj5wNnRd7h-5GITeJtTTwX77sohTHeK82uZdLeJNunNqtSV-DEJHvbxTqLT7uPEQq_M56M9XIHq5a7BGlI2lJ09zKuIAeJvHBXQ8MWIWwfo41o", "alt": "Customer" },
+      { "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAbJE5jdkw4HHuXaVMpBeruIzbH3JhPTfDsJ2S1VplP3pjj6mgLZpTXN2jJdKLvMGbSwUNe2Q1S4Ob_pHeC5oN4kwIDqXfeRg0YHH-1_WvmImZb__4YvyQkk-5pLqg-pSYDybwl2W4Zqiff6NdM1Jj3rBzky4je3aqBBDSqNwFMdf0U0MwAIRwXukpQmMKrIsiZu7slcq2dSVSUW17f-u44XCIac5xMgSmqXpFuZ10BCkWaQ98GdpWRPOmKLsEy2DtkA7L5VK71SBTS", "alt": "Customer" },
+      { "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBw62ICxsycj1XuH1eC-ynGS-hHbTP-ypOOTfbxxk2zWZ7yEEA0__y9cksQnVwshMlyySqV3UnLlXvhyf2DNx8rv7RVndmv2hfkm0nft_TJJqz-zy-DqLzGpoGYz31qTEu2Q7VlHtlLMQG47Os8gdU-Z6RVsIa6uwl7hLgLDH8NVPKuoBHIBmHw5YgncMAnO2XDmak2kzFzrabAyay1KZ6wG5ci1XuZvFkK3wbuYDR-dJn5qsL9rE3D_7NX2re-e6P9OcuRRnfoDoHL", "alt": "Customer" }
+    ]
+  },
+  "threeColumnStrip": {
+    "images": [
+      { "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDOW9vEK-nowblgKKPddqZ2cR3Cx2dAel5cH3-PDxQiGkQhnnM3050RAUsEcVU2GyTC8EJDGmNOsqOh4NXdT4DBX3Fy-KmJiOgkjURUaqqitJ0-mq2QV-G0TjmNyzW4iUzf5YTWlrhv_nEueH_cmJvNBTTnjli_Z3YqpH2uMERoGsflJC8SW5cnSpwNk7u7SoZbQlXTmi3I-OUvqZ4GhXklinOHxfwwiQAAuKnJxNSAXQZtrsnutqRwCIZ90j1o2UIzRt7U72cEBRk4", "alt": "Printing Equipment" },
+      { "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBM0RL_4FUIs-1zSRPBwfwqeN6o2Wpop7NqzQfFKqFxbY3-Ba-xErfGyGIF_wfsQUCNKkt-16C_Mc220jd5SWTXwK4jrB-Mkhb_lvn-KW5R99WXYoocNeInFo7f3AyTSTAxD5dTQPzRlk7HQ03GQhNvEPFNcRFqrqm9rcELkTLc2ELBAeu02i8srMVH8EckzOR3kZwPgsNJlbtHf_usD607qXPQ7nh05EAOWI2drIu4_7hh5_nlz30kAaNlWmeL3Msq5--tRckzRug0", "alt": "Finished Products" }
+    ],
+    "techCard": {
+      "title": "State-of-the-Art Tech Only",
+      "buttonText": "Explore more"
+    }
+  },
+  "partners": [
+    { "icon": "school", "label": "School Dist. 1" },
+    { "icon": "corporate_fare", "label": "Corporate Inc" },
+    { "icon": "palette", "label": "Design Studio" },
+    { "icon": "business", "label": "MVR Local" },
+    { "icon": "print", "label": "Global Prints" }
+  ],
+  "serviceCategories": {
+    "sectionTitle": "Our Service Categories",
+    "items": [
+      { "title": "Business Essentials", "serviceCount": "12 services", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDpFxSczuCNY4h-vlX7d2w3CtMWonxEa8WTqkm6-XbULj0qo7KxsxDhYI1eEP2ZNEVw2_7LvEbjnBT-EIsUrClDwDg4XYD47IOwHpQWwwA02PST4HTM6GgGHZ88EWCC15mhi49h1vqLnj6XlJvotuSnwUznjt_WNRMi6IZ9DlVpR6k_90yCzlog1HfWV2I49XT-T-rf2BLo-Y6wJp1yGmeeQwN4VYPNchkJHPtan8fW42NCkl1gw0mFBxwKgxNgCqVY58Kx_aCHBqb7", "imageAlt": "Business Essentials", "cardClass": "bg-gray-100 dark:bg-gray-800", "textClass": "", "countClass": "text-gray-500" },
+      { "title": "Marketing Materials", "serviceCount": "24 services", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDn5E_LkgWMbaZfz8CBgLad69GVoAY_mnKa94rqzE3qafe34hArkQPwpYl6rfRTMuBkY6uVJBVnfDJoJVtucqWuHulMlshjQWZbJLXxy2bJYzj6bbFHsUWF_hECXLgXRD2vqJXCFH06yYQYpV7xcc538SOYICvReU6cg42k4jAZmG7ZqXWxldYPuZbbwuPaZNd4zxfyRHTIIb3wTlpQscZyNSc2hnAy8Y8zE9OA6jpXKK3NnxnVo_acJDwR9O1ip3VyERcdpK0o4n5L", "imageAlt": "Marketing Materials", "cardClass": "bg-[#556B2F]", "textClass": "text-white", "countClass": "text-white/70" },
+      { "title": "Personal Prints", "serviceCount": "15 services", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBZOKFygx6xjeKKfb8bC-HBjJKDHE6BZIhKiUZZG_142Z06Oum4ddKLfjbH-7-YsWH4CAUO6eaGqZNdf4Suj-L_FPUR-GZyEg6H9LOlL_O3hJFpsGLyZ7VvlvvdA0gmZfPM4DG784WJGVwYXXL22cmp17dOkdYb4JetM-qCga5zf_nSTQ49Ml4BS_yfhiDyw4zVTPT1ybBhLCoI55R6KBvTe5xx2FukNqSAjmsXUAzH56jOGvq68L0C4VY_lowPFTw14kxxXtwce-7A", "imageAlt": "Personal Prints", "cardClass": "bg-[#D2B48C]", "textClass": "", "countClass": "text-black/50" }
+    ]
+  },
+  "topServices": {
+    "sectionTitle": "Our Top Services",
+    "sectionSubtitle": "Precision printing for every professional need",
+    "items": [
+      { "title": "Premium Business Cards", "priceFrom": "$19.99", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAuX15KqhlsWGHU3akedNQ4KHSGvO45Omi60xcj1Tpc0GlB1zmxoLuumUCgGOGaCcx_daRzcvSmym-DuC0m7vzcOLfaAUKEgvz7PJSiYZXc6z4MdyuYzQuCxH-KNLrYSsW7Ac1Vy-cD1d60syRfjM2ovsL7go4kIhJJKoufnr5WpB-uaum569TzHaRyLThhtpV7KwTm_JoKuclBD4ec3aYdWzgSJ6BDGV8gu8DZ_fTkZU7ZDC_-59q7a59zNFLBHmDjpoY-6t4ILYwG", "alt": "Business Cards" },
+      { "title": "Glossy Promotional Flyers", "priceFrom": "$29.00", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBVxsGwxwDgaCR6QKTSibS5C_jK_L7tQT8mFgLKG5BeoAvyUKuFj9dbzMqhXTrqmOp-ZV-R4KTPLOn_q3J_Q2DzoGAo_w-178QMaYppY-ECrzLxRHQ_EUwLz8X-yeUfxi-skFEZOFE4rvm05jv8P2laxXEihxemQ1bEMWTHfqmRQA-HJmAIk6y67Z-9a2cxc7ISYbOOHULgfmRxj0l5m_gZ5RAETxVe8Xa8Op8DvtETOY1fl80pFayESCNGvLrND3Bc5nAIs75YfyWE", "alt": "Flyers" },
+      { "title": "Large Format Posters", "priceFrom": "$45.00", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCLIGCBJfbScYCaRwMMgvmyObcrOlXiG415g8r308b-szp3LDrKY4gix2gn2z-3Diqo-b8TWHvIxtEk7jbk5pip2_aqXEZT6BZ6b_1MmTYaTaz0pyg-OTBnwUfwaFcvSGiQoMSgYdutd6RgJp3bTwTsg5xEyeZdykypoSGUSS7-awqRhqFsuHiHo2MwmfNt_YDFtctC9BVuWAnPTwVQpyd95JNjTZsQHPxrmPvPasEQmVBI1IGMHg--PPpr-8Bk_1ku-C644feYNDsW", "alt": "Posters" },
+      { "title": "Tri-Fold Brochures", "priceFrom": "$35.00", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBdT5UJ5d0OUV2y2_hxkzm3S_q2XHZMwcVbzba3379bqNCLRSnJinNjPBpMZ3Umz1r9cuPzJqT5mCkozLbaaGxvHIWlKjW51Lu0fn92VW1WiSW8OhAYxEpDYMNq41neiB3ysNO070v0Y7dg6Xmht-zrdJJ3TOyBVRMyQK-i82sgHcLWXVkd6eagIV8XPNeRlaFBuBMMwLzPUSeKEx6_akRtA-CXppxfHKrmkx92_Bg2nKYEy5i42SZdodAPBZIL9ylQTZdKRpAsya6H", "alt": "Brochures" },
+      { "title": "Custom Branded T-Shirts", "priceFrom": "$12.50", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDHHIwcHGlYnw0NszQpNzbfyMERVDUaJ01kCZMgadAow3f-YXB0NThWO0uqtihMw1Ic9bvkihU6qKopLGoFpYmjQpJ21M-HjA8FPyjBh9YEC666vuL3Hl_BunBzBTX8_gWYCjY3gbCJ_DJ70pkMQ4jPxu6ScGk8O-zj3GYACO3zckx3esWf2hypMtgAD4fEOwm3akf6x_n2j-KY07ejSSGmBEsCkAh372U9LXeqxrG4mrb7bEIpOsOuNKt-gAdG0WJ35ZVQsoq8DVTb", "alt": "T-Shirts" },
+      { "title": "Annual Report Catalogs", "priceFrom": "$120.00", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCWdjPfksh3lUW2vw1tPDRkngJ0Kjdui180Q9scv_4ywo2wbMjJWUDqRfgm3ROlwrdkT9uaOhWTB5_ZR0Spvn6Euy2MQ5MbBTNB5_u7ZpArV-_jFwHo2s40s1wSRe3Na-oDHNS2mONikQ5Qn_KiZdSZ42Z77E3710wZBs7xc-TTKKLV344L2PlwGbsUNWE_XV539IfHl6e8GG-CBz0FHqGmbWsKs2EAu9tyne0B1hVelb-ZOyFnigHj6VGfxEoXabSJT-tBNXte-xeQ", "alt": "Catalogs" }
+    ]
+  },
+  "promo": {
+    "headline": "Get 50% Off",
+    "subtext": "On all new business bundles",
+    "minPurchase": "min. purchase $450.00",
+    "buttonText": "Shop Now",
+    "buttonIcon": "north_east",
+    "leftImages": [
+      { "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQB7Kp_o-zOH-191fYQLEEeDN9A1aO4F8BQkc1106sRCsp09sDSB8ijxocdClXHVHtnOK7zbQ-50PUnfY0wl_9lwFNtzF6RQ3-n_C2Qx5icOT9gcRIZi3aojToXhET6Q2k_8jBvkTgMlbFZ92My4BPeOjl9gNtIp2-4321vIaclAQ0wmU0zT2mkRAwhYd4V1_-tZc5lUd-wxAzNqcLa0kDtTo56rtpptkZazYvBp0f8iUMeikdIvvaxffptensSgm5DgCl0uUtWFIs", "alt": "Promotional 1" },
+      { "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBHUkOrVP2f3YpRnGCIBrT5hSTgBC77___rmkXXPq9_g5q1WsA4iKp-JdfbScxWyvClmwvTFtxfQRgeR7ZC5FtheQBU5h39omiw3qE9Ae_1d1Xi7EdwpGkmy9kmhmhkolXjLYdZJdR0PXFADJ0nMTAYGU6qFS-Kjvnh4dm1dm_1j8Q3y2K3n1kJVFFbVqKrUktc3UdwLlO6ELhchES_yA-SkbGQJV_C0yYU7dXEWNIM6l5EdIZ2pRbeGwoKkgpa1TsYEKmrrsrLkIT2", "alt": "Promotional 2" }
+    ],
+    "rightImages": [
+      { "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuB4icaZzc4kHMzOMsu_AiAR4oVEHHwkTD9vdtPwJxv3qW10EqiXfVH463oOD70AF8sMUiekZ9OohmFjg2IxM2951qs8YqXOm1Ftv5D_S1mIdKE2QGD_d-RgIregkE_b4DCK2eLG5gxaLmqTDkNeqvJY3xT2Pi3btruYPwR0nle-QptZMBOfVjM4ITKU6RnzT2tvqBHKAE895dhQBNhJp5-txx69uwvS3rmtCF9nL0G_MOWHXx8NB3IfQm24jQakVFVK56x9p_9IWBVv", "alt": "Promotional 3" },
+      { "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuB8npMW4nTDaHiE6ehJw_vkpQ-ITqbZP5EWv_pr8A9NLrhudHtqEyePNfwlaVd57_DyyBB2StNzxUP27FamXD9lHc68i3oG2lnK00InQOd5P2Y1a0cSE0BB_0nM65W1JtYMiogpLd8Gr9a3ZvAl-1f1yFdJ5UZcaNYVOEr94QC4DR4AEN1hEITdDChVLBHl6haYmvLW5-zsOLsJl2YmVZyMjwHpRFh06wWEBwgIbD44tO1gRZwfFu3qNK46AvaB8JBC3tC2VvHNqKM0", "alt": "Promotional 4" }
+    ]
+  },
+  "bookingForm": {
+    "title": "Book Your Print Service",
+    "subtitle": "Fast, reliable, and professional printing at your fingertips.",
+    "serviceTypeLabel": "Service Type",
+    "serviceTypeOptions": ["Business Cards", "Marketing Materials", "Large Format Printing", "Custom Apparel"],
+    "userNameLabel": "User Name",
+    "userNamePlaceholder": "Your Full Name",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "john@example.com",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "+1 (555) 000-0000",
+    "detailsLabel": "Project Details",
+    "detailsPlaceholder": "Describe your printing needs...",
+    "submitText": "Request Quote",
+    "submitIcon": "north_east"
+  },
+  "footer": {
+    "brandName": "M V R PRINTERS",
+    "tagline": "Seamless printing transactions, personalized insights, and innovative solutions for a smarter tomorrow. We bring your ideas to life with ink and paper.",
+    "socialLinks": [
+      { "name": "Facebook", "href": "#", "iconUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCm1zOi51IKBxpNd9WLQ4Dmh7LhNXtqkvxj8ubx8XiOFmuX8x8ohEkj_kxhqbvuDlyeJmoNj6YYzSiBey2GLyN1P1rOiY-_rzedGYm05lLGReVmTG-5yM65Jk1-YaOv9vnZmnfKsLWd_9mxfVzCSLNX79PlmGVQo9C4d1WsMDq66LOD7Y1hIYGNCWBFA5BIkfn4TU7okYVzNJVH5yFVSUv7gbQVoJ-NaCRpJALygZdUSHc4liuqKdZl6Yw7iIGkcybLanrriQcQfeO5" },
+      { "name": "Instagram", "href": "#", "iconUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAHgJwUKgCDXvoBgzxljZ0lZwC9_CGbd-nop3F_bGqSMiq6RsrcZwS_y9sAp9xWm6EUqffkKIP9Y_ytwt2D7b0qz678KERDxdHjHRguAIRqvN2x0Ou-DfLXNTpdBI5MMkffY6NyIqUXjUk6e8un5-h507LkT3VMxwIgun_33FJs0_t40sbDLVcbfUM-ChDxbZwF2xABKJQgrw_sJ5qYJPoMutABzYwxdnXIeArh7ZB63hXbCIeCjluUBaHG_bM5Z0cZHbVlC7PfSzfW" },
+      { "name": "Twitter", "href": "#", "iconUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBiSVK6_4_w9GHjn0hQ6XoYQPl8smMcTHSPUgj0UunX9tvoYlRy8V4vFSem6OPrV6map9dKRiW3qyxAZjJgsl05588j3yQDWdL7wi2LBYI3ZvoHqOq9VOLG9XkKhztksKPBIdqIWz7FpFkJouIOz9vPQWYmWvY4POwApyg7VrfnYmgGV38kdY2RFa6j5RUCP4TkxrdZ6kpeneCul-LokcWdJUfhKY9ad614DhC9w98pRXMKgTuLvBGr99AHqx-EV9z3fa9r-Pn7l9eG" }
+    ],
+    "about": { "heading": "About", "links": [{ "label": "Company", "href": "#" }, { "label": "Leadership", "href": "#" }, { "label": "Press", "href": "#" }, { "label": "Careers", "href": "#" }] },
+    "help": { "heading": "Help", "links": [{ "label": "Help Center", "href": "#" }, { "label": "Support Team", "href": "#" }, { "label": "Community", "href": "#" }, { "label": "FAQs", "href": "#" }] },
+    "menu": { "heading": "Menu", "links": [{ "label": "Business", "href": "#" }, { "label": "Marketing", "href": "#" }, { "label": "Personal", "href": "#" }, { "label": "Popular", "href": "#" }] },
+    "copyright": "Copyright © 2025 M V R PRINTERS. All Rights Reserved.",
+    "legalLinks": [
+      { "label": "Privacy Policy", "href": "#" },
+      { "label": "Terms of Service", "href": "#" }
+    ]
+  }
+}
