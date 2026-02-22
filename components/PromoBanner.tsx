@@ -34,11 +34,13 @@ export default function PromoBanner({ data }: PromoBannerProps) {
         </p>
         <Link
           href="#"
-          className="bg-primary text-white px-10 py-4 rounded-full font-bold flex items-center gap-4 mx-auto w-fit hover:scale-105 transition-transform"
+          className="bg-primary text-white px-10 py-4 rounded-full font-bold flex items-center justify-center gap-2 mx-auto w-fit hover:scale-105 transition-transform"
         >
-          {data.buttonText}{" "}
-          <span className="material-symbols-outlined text-sm">
-            {data.buttonIcon}
+          <span className="flex items-center justify-center gap-2">
+            {data.buttonText}
+            <span className="material-symbols-outlined inline-flex items-center justify-center text-[1.25em] leading-none shrink-0">
+              {data.buttonIcon}
+            </span>
           </span>
         </Link>
       </div>

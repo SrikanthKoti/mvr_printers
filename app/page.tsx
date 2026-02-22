@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useCallback } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ThreeColumnStrip from "@/components/ThreeColumnStrip";
@@ -14,6 +17,20 @@ import siteDataJson from "../src/data/site-data.json";
 const siteData = siteDataJson as SiteData;
 
 export default function Home() {
+  const [preselectedService, setPreselectedService] = useState<string | null>(
+    null
+  );
+
+  const handleBookService = useCallback((serviceTitle: string) => {
+    setPreselectedService(serviceTitle);
+    requestAnimationFrame(() => {
+      document.getElementById("request")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }, []);
+
   return (
     <>
       <Header data={siteData.header} />
@@ -22,9 +39,15 @@ export default function Home() {
         <ThreeColumnStrip data={siteData.threeColumnStrip} />
         {/*<Partners data={siteData.partners} />*/}
         {/*<ServiceCategories data={siteData.serviceCategories} />*/}
-        <TopServices data={siteData.topServices} />
+        <TopServices
+          data={siteData.topServices}
+          onBookService={handleBookService}
+        />
         {/*<PromoBanner data={siteData.promo} />*/}
-        <BookingForm data={siteData.bookingForm} />
+        <BookingForm
+          data={siteData.bookingForm}
+          preselectedService={preselectedService}
+        />
       </main>
       <Footer data={siteData.footer} />
     </>

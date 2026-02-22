@@ -1,12 +1,17 @@
-import Image from 'next/image';
-import type { SiteData } from '@/types/site-data';
-import Link from 'next/link';
+"use client";
+
+import Image from "next/image";
+import type { SiteData } from "@/types/site-data";
 
 interface TopServicesProps {
-  data: SiteData['topServices'];
+  data: SiteData["topServices"];
+  onBookService?: (serviceTitle: string) => void;
 }
 
-export default function TopServices({ data }: TopServicesProps) {
+export default function TopServices({
+  data,
+  onBookService,
+}: TopServicesProps) {
   return (
     <section
       className="relative w-full mx-auto max-w-7xl px-5 md:px-10 py-20"
@@ -37,8 +42,11 @@ export default function TopServices({ data }: TopServicesProps) {
                 <p className="text-gray-500 font-medium text-sm">
                   {item.description}
                 </p>
-                <button className="w-full mt-3 inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold transition-all duration-300 ease-out hover:bg-primary/90 hover:-translate-y-[2px] hover:shadow-lg active:translate-y-0 active:shadow-md">
-                  {' '}
+                <button
+                  type="button"
+                  className="w-full mt-3 inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold transition-all duration-300 ease-out hover:bg-primary/90 hover:-translate-y-[2px] hover:shadow-lg active:translate-y-0 active:shadow-md"
+                  onClick={() => onBookService?.(item.title)}
+                >
                   Book Service
                 </button>
               </div>

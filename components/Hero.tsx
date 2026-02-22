@@ -25,11 +25,13 @@ export default function Hero({ data }: HeroProps) {
             </p>
             <Link
               href={data.ctaHref}
-              className="bg-primary text-white px-8 py-4 rounded-full font-bold text-sm sm:text-md flex items-center gap-4 hover:opacity-90 transition-opacity w-fit"
+              className="bg-primary text-white px-8 py-4 rounded-full font-bold text-sm sm:text-md flex items-center justify-center gap-2 hover:opacity-90 transition-opacity w-fit"
             >
-              {data.ctaText}{' '}
-              <span className="material-symbols-outlined text-sm">
-                {data.ctaIcon}
+              <span className="flex items-center justify-center gap-2">
+                {data.ctaText}
+                <span className="material-symbols-outlined inline-flex items-center justify-center text-[1.25em] leading-none shrink-0">
+                  {data.ctaIcon}
+                </span>
               </span>
             </Link>
             <div className="mt-16 flex sm:items-center gap-4 sm:flex-row flex-col">
