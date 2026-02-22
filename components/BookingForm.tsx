@@ -218,7 +218,7 @@ export default function BookingForm({
               {data.detailsLabel}
             </label>
             <textarea
-              {...register("details")}
+              {...register('details')}
               id="details"
               placeholder={data.detailsPlaceholder}
               rows={4}
@@ -227,14 +227,11 @@ export default function BookingForm({
           </div>
           <div className="flex items-end">
             <button
-              className="w-full bg-primary text-white py-4 rounded-xl font-bold hover:opacity-90 transition-opacity flex justify-center items-center gap-2"
+              className="w-full bg-primary text-white py-4 px-10 rounded-xl font-bold hover:opacity-90 transition-opacity flex justify-center items-center gap-2"
               type="submit"
             >
               <span className="flex items-center justify-center gap-2">
                 {data.submitText}
-                <span className="material-symbols-outlined inline-flex items-center justify-center text-[1.25em] leading-none shrink-0">
-                  {data.submitIcon}
-                </span>
               </span>
             </button>
           </div>
