@@ -8,7 +8,7 @@ interface BookingFormProps {
 
 export default function BookingForm({ data }: BookingFormProps) {
   return (
-    <section id="booking">
+    <section id="request" className="relative w-full mx-auto max-w-7xl px-5 md:px-10 py-20">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-extrabold mb-2">{data.title}</h2>
         <p className="text-gray-500 italic">{data.subtitle}</p>

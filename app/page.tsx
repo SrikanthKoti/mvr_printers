@@ -17,13 +17,13 @@ export default function Home() {
   return (
     <>
       <Header data={siteData.header} />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-12">
+      <main className="flex-1">
         <Hero data={siteData.hero} />
         <ThreeColumnStrip data={siteData.threeColumnStrip} />
-        <Partners data={siteData.partners} />
-        <ServiceCategories data={siteData.serviceCategories} />
+        {/*<Partners data={siteData.partners} />*/}
+        {/*<ServiceCategories data={siteData.serviceCategories} />*/}
         <TopServices data={siteData.topServices} />
-        <PromoBanner data={siteData.promo} />
+        {/*<PromoBanner data={siteData.promo} />*/}
         <BookingForm data={siteData.bookingForm} />
       </main>
       <Footer data={siteData.footer} />

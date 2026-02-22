@@ -2,7 +2,6 @@ export interface SiteData {
   meta: { title: string; description: string };
   header: {
     brandName: string;
-    navTop: Array<{ label: string; href: string }>;
     navCategories: Array<{ label: string; href: string }>;
   };
   hero: {
@@ -37,7 +36,7 @@ export interface SiteData {
     sectionSubtitle: string;
     items: Array<{
       title: string;
-      priceFrom: string;
+      description: string;
       image: string;
       alt: string;
     }>;
@@ -74,6 +73,7 @@ export interface SiteData {
     about: { heading: string; links: Array<{ label: string; href: string }> };
     help: { heading: string; links: Array<{ label: string; href: string }> };
     menu: { heading: string; links: Array<{ label: string; href: string }> };
+    quickLinks: Array<{ label: string; href: string }>;
     copyright: string;
     legalLinks: Array<{ label: string; href: string }>;
   };
