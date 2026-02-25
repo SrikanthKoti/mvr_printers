@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import type { SiteData } from '@/types/site-data';
-import { string } from 'postcss-selector-parser';
 
 interface BookingFormProps {
   data: SiteData['bookingForm'];
@@ -59,6 +58,8 @@ export default function BookingForm({
   preselectedService,
 }: BookingFormProps) {
   const [toastVisible, setToastVisible] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const toastTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const {
@@ -76,8 +77,9 @@ export default function BookingForm({
     },
   });
 
-  const showToast = () => {
+  const showToast = (message = 'Thank you! We will be calling/emailing you in some time.') => {
     if (toastTimeoutRef.current) clearTimeout(toastTimeoutRef.current);
+    setToastMessage(message);
     setToastVisible(true);
     toastTimeoutRef.current = setTimeout(() => {
       setToastVisible(false);
@@ -85,25 +87,45 @@ export default function BookingForm({
     }, 4000);
   };
 
-  const onValidSubmit = (values: FormValues) => {
-    const message = `
+  const onValidSubmit = async (values: FormValues) => {
+    setIsSubmitting(true);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          serviceType: values.serviceType,
+          userName: values.userName,
+          email: values.email,
+          phone: values.phone,
+          details: values.details || '',
+        }),
+      });
+      const json = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        showToast(json.error || 'Something went wrong. Please try again.');
+        return;
+      }
+
+      showToast();
+
+      const message = `
         New Booking Request
-        
+
         Service: ${values.serviceType}
         Name: ${values.userName}
         Email: ${values.email}
         Phone: ${values.phone}
         Details: ${values.details || 'N/A'}
-  `.trim();
-
-    const encodedMessage = encodeURIComponent(message);
-
-    const whatsappUrl = `https://wa.me/${data.whatsAppNumber}?text=${encodedMessage}`;
-
-    // Open WhatsApp in new tab
-    window.open(whatsappUrl, '_blank');
-
-    showToast();
+      `.trim();
+      const whatsappUrl = `https://wa.me/${data.whatsAppNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    } catch {
+      showToast('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   useEffect(() => {
@@ -239,11 +261,12 @@ export default function BookingForm({
           </div>
           <div className="flex items-end">
             <button
-              className="w-full bg-primary text-white py-4 px-10 rounded-xl font-bold hover:opacity-90 transition-opacity flex justify-center items-center gap-2"
+              className="w-full bg-primary text-white py-4 px-10 rounded-xl font-bold hover:opacity-90 transition-opacity flex justify-center items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
               type="submit"
+              disabled={isSubmitting}
             >
               <span className="flex items-center justify-center gap-2">
-                {data.submitText}
+                {isSubmitting ? 'Sending…' : data.submitText}
               </span>
             </button>
           </div>
@@ -255,7 +278,7 @@ export default function BookingForm({
           role="alert"
           className="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-6 py-4 rounded-xl bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-sm font-medium shadow-lg transition-opacity duration-300"
         >
-          Thank you! We will be calling/emailing you in some time.
+          {toastMessage}
         </div>
       )}
     </section>
