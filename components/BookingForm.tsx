@@ -1,11 +1,12 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
-import { useForm } from "react-hook-form";
-import type { SiteData } from "@/types/site-data";
+import { useEffect, useRef, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import type { SiteData } from '@/types/site-data';
+import { string } from 'postcss-selector-parser';
 
 interface BookingFormProps {
-  data: SiteData["bookingForm"];
+  data: SiteData['bookingForm'];
   preselectedService?: string | null;
 }
 
@@ -19,7 +20,7 @@ type FormValues = {
 
 function matchServiceOption(
   options: string[],
-  title: string
+  title: string,
 ): string | undefined {
   const normalized = title.trim();
   const exact = options.find((o) => o === normalized);
@@ -32,26 +33,26 @@ const INDIAN_PHONE_DIGITS = 10;
 const INDIAN_MOBILE_FIRST_DIGIT = /^[6-9]/;
 
 function validateIndianPhone(value: string): true | string {
-  const digits = value.replace(/\D/g, "");
+  const digits = value.replace(/\D/g, '');
   if (digits.length !== INDIAN_PHONE_DIGITS) {
-    return "Enter a valid 10-digit Indian mobile number";
+    return 'Enter a valid 10-digit Indian mobile number';
   }
   if (!INDIAN_MOBILE_FIRST_DIGIT.test(digits)) {
-    return "Indian mobile number must start with 6, 7, 8 or 9";
+    return 'Indian mobile number must start with 6, 7, 8 or 9';
   }
   return true;
 }
 
 function phoneInputHandler(e: React.FormEvent<HTMLInputElement>) {
   const input = e.currentTarget;
-  const digits = input.value.replace(/\D/g, "").slice(0, INDIAN_PHONE_DIGITS);
+  const digits = input.value.replace(/\D/g, '').slice(0, INDIAN_PHONE_DIGITS);
   input.value = digits;
 }
 
 const fieldErrorClass =
-  "mt-1 text-sm text-red-600 dark:text-red-400 min-h-[1.25rem]";
+  'mt-1 text-sm text-red-600 dark:text-red-400 min-h-[1.25rem]';
 const inputErrorClass =
-  "ring-2 ring-red-500 focus:ring-red-500 dark:ring-red-400 dark:focus:ring-red-400";
+  'ring-2 ring-red-500 focus:ring-red-500 dark:ring-red-400 dark:focus:ring-red-400';
 
 export default function BookingForm({
   data,
@@ -67,11 +68,11 @@ export default function BookingForm({
     formState: { errors },
   } = useForm<FormValues>({
     defaultValues: {
-      serviceType: data.serviceTypeOptions[0] ?? "",
-      userName: "",
-      email: "",
-      phone: "",
-      details: "",
+      serviceType: data.serviceTypeOptions[0] ?? '',
+      userName: '',
+      email: '',
+      phone: '',
+      details: '',
     },
   });
 
@@ -84,7 +85,24 @@ export default function BookingForm({
     }, 4000);
   };
 
-  const onValidSubmit = () => {
+  const onValidSubmit = (values: FormValues) => {
+    const message = `
+        New Booking Request
+        
+        Service: ${values.serviceType}
+        Name: ${values.userName}
+        Email: ${values.email}
+        Phone: ${values.phone}
+        Details: ${values.details || 'N/A'}
+  `.trim();
+
+    const encodedMessage = encodeURIComponent(message);
+
+    const whatsappUrl = `https://wa.me/${data.whatsAppNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+
     showToast();
   };
 
@@ -98,9 +116,9 @@ export default function BookingForm({
     if (!preselectedService) return;
     const matched = matchServiceOption(
       data.serviceTypeOptions,
-      preselectedService
+      preselectedService,
     );
-    if (matched) setValue("serviceType", matched);
+    if (matched) setValue('serviceType', matched);
   }, [preselectedService, data.serviceTypeOptions, setValue]);
 
   return (
@@ -127,11 +145,11 @@ export default function BookingForm({
                 {data.serviceTypeLabel}
               </label>
               <select
-                {...register("serviceType", { required: "Service type is required" })}
+                {...register('serviceType', {
+                  required: 'Service type is required',
+                })}
                 id="service-type"
-                className={`w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl py-3 px-4 focus:ring-1 focus:ring-primary ${
-                  errors.serviceType ? inputErrorClass : ""
-                }`}
+                className={`w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl py-3 px-4 focus:ring-1 focus:ring-primary ${errors.serviceType ? inputErrorClass : ''}`}
               >
                 {data.serviceTypeOptions.map((opt) => (
                   <option key={opt} value={opt}>
@@ -151,13 +169,11 @@ export default function BookingForm({
                 {data.userNameLabel}
               </label>
               <input
-                {...register("userName", { required: "Name is required" })}
+                {...register('userName', { required: 'Name is required' })}
                 id="user-name"
                 placeholder={data.userNamePlaceholder}
                 type="text"
-                className={`w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl py-3 px-4 focus:ring-1 focus:ring-primary ${
-                  errors.userName ? inputErrorClass : ""
-                }`}
+                className={`w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl py-3 px-4 focus:ring-1 focus:ring-primary ${errors.userName ? inputErrorClass : ''}`}
               />
               <p className={fieldErrorClass} role="alert">
                 {errors.userName?.message}
@@ -169,19 +185,17 @@ export default function BookingForm({
               {data.emailLabel}
             </label>
             <input
-              {...register("email", {
-                required: "Email is required",
+              {...register('email', {
+                required: 'Email is required',
                 pattern: {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                  message: "Please enter a valid email address",
+                  message: 'Please enter a valid email address',
                 },
               })}
               id="email"
               placeholder={data.emailPlaceholder}
               type="email"
-              className={`w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl py-3 px-4 focus:ring-1 focus:ring-primary ${
-                errors.email ? inputErrorClass : ""
-              }`}
+              className={`w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl py-3 px-4 focus:ring-1 focus:ring-primary ${errors.email ? inputErrorClass : ''}`}
             />
             <p className={fieldErrorClass} role="alert">
               {errors.email?.message}
@@ -192,8 +206,8 @@ export default function BookingForm({
               {data.phoneLabel}
             </label>
             <input
-              {...register("phone", {
-                required: "Phone is required",
+              {...register('phone', {
+                required: 'Phone is required',
                 validate: validateIndianPhone,
               })}
               id="phone"
@@ -202,9 +216,7 @@ export default function BookingForm({
               autoComplete="tel"
               type="tel"
               onInput={phoneInputHandler}
-              className={`w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl py-3 px-4 focus:ring-1 focus:ring-primary ${
-                errors.phone ? inputErrorClass : ""
-              }`}
+              className={`w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl py-3 px-4 focus:ring-1 focus:ring-primary ${errors.phone ? inputErrorClass : ''}`}
             />
             <p className={fieldErrorClass} role="alert">
               {errors.phone?.message}

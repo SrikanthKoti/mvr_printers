@@ -65,6 +65,7 @@ export interface SiteData {
     detailsPlaceholder: string;
     submitText: string;
     submitIcon: string;
+    whatsAppNumber: string;
   };
   footer: {
     brandName: string;

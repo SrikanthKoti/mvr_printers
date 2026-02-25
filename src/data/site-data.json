@@ -223,7 +223,8 @@
     "detailsLabel": "Project Details (optional)",
     "detailsPlaceholder": "Describe your printing needs...",
     "submitText": "Request Service on Whatsapp",
-    "submitIcon": "north_east"
+    "submitIcon": "north_east",
+    "whatsAppNumber": "91XXXXXXXXXX"
   },
   "footer": {
     "brandName": "M V R PRINTERS",
