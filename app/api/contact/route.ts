@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { sendWhatsAppMessage } from '@/lib/whatsapp';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -79,7 +80,40 @@ export async function POST(request: Request) {
     );
   }
 
-  return NextResponse.json({ success: true, id: data?.id });
+  const toNumber = process.env.WASENDER_TO_NUMBER?.trim();
+  let whatsAppSent: boolean | undefined;
+
+  if (toNumber) {
+    console.debug('[Contact API] WASENDER_TO_NUMBER is set, sending WhatsApp message');
+    const formattedMessage = [
+      'New Booking Request',
+      '',
+      `Service: ${serviceType}`,
+      `Name: ${userName}`,
+      `Email: ${email}`,
+      `Phone: ${phone}`,
+      '',
+      'Details:',
+      details ? details : 'N/A',
+    ].join('\n');
+    console.debug('[Contact API] formatted WhatsApp message length:', formattedMessage.length);
+
+    const result = await sendWhatsAppMessage(toNumber, formattedMessage);
+    whatsAppSent = result.sent;
+    console.debug('[Contact API] WhatsApp send result', { sent: result.sent, error: result.error });
+
+    if (!result.sent && result.error) {
+      console.error('[Contact API] WhatsApp send failed:', result.error);
+    }
+  } else {
+    console.debug('[Contact API] WASENDER_TO_NUMBER not set, skipping WhatsApp');
+  }
+
+  return NextResponse.json({
+    success: true,
+    id: data?.id,
+    ...(whatsAppSent !== undefined && { whatsAppSent }),
+  });
 }
 
 function escapeHtml(text: string): string {

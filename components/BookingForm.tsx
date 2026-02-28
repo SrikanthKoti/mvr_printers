@@ -108,19 +108,12 @@ export default function BookingForm({
         return;
       }
 
+      if (json.success && json.whatsAppSent === false) {
+        showToast('Something went wrong. Please try again.');
+        return;
+      }
+
       showToast();
-
-      const message = `
-        New Booking Request
-
-        Service: ${values.serviceType}
-        Name: ${values.userName}
-        Email: ${values.email}
-        Phone: ${values.phone}
-        Details: ${values.details || 'N/A'}
-      `.trim();
-      const whatsappUrl = `https://wa.me/${data.whatsAppNumber}?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, '_blank');
     } catch {
       showToast('Something went wrong. Please try again.');
     } finally {
